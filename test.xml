@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workflowblock>
+   <metadata>
+      <name>getVoltageMap</name>
+      <author>Steven Williams</author>
+      <date/>
+      <license/>
+   </metadata>
+   <inputs>
+      <voltageType type="select">Bipolar Unipolar</voltageType>
+      <distanceThreshold type="numeric" validation_max="10" validation_min="0"/>
+   </inputs>
+   <outputs>
+      <voltageField type="numeric"/>
+   </outputs>
+</workflowblock>

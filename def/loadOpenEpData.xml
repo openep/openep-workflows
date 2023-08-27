@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflowblock>
+
+  <metadata>
+    <name>Load OpenEP Data</name>
+    <version>1.0.0</version>
+    <author>Steven Williams</author>
+    <date></date>
+    <license></license>
+    <description>A workflow for loading an OpenEP dataset</description>
+  </metadata>
+
+  <inputs>
+    <input type="string">path</input>
+  </inputs>
+
+  <outputs>
+    <output type="struct">userdata</output>
+  </outputs>
+
+  <construction>
+    <path>~/Desktop/userdata.mat</path>
+  </construction>
+
+  <openepfunction>
+    <functionname>loadOpenEpData</functionname>
+    <essential>
+      <argument>
+        <position>1</position>
+        <source>this</source>
+        <value>path</value>
+      </argument>
+    </essential>
+  </openepfunction>
+
+</workflowblock>

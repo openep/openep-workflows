@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflowblock>
+
+  <metadata>
+    <name>Get Voltage Map</name>
+    <version>1.0.0</version>
+    <author>Steven Williams</author>
+    <date></date>
+    <license></license>
+    <description>A workflow for computing a voltage map</description>
+  </metadata>
+
+  <inputs>
+    <input type="struct" from="previous">userdata</input>
+    <input type="select" options="Bipolar Unipolar" from="this">voltageType</input>
+    <input type="numeric" range="0 10" from="this">distanceThreshold</input>
+  </inputs>
+
+  <outputs>
+    <output type="numeric">voltageField</output>
+  </outputs>
+
+  <openepfunction>
+    <functionname>getVoltage</functionname>
+    <essential>
+      <argument>
+        <position>1</position>
+        <source>previous</source>
+        <value>userdata</value>
+      </argument>
+    </essential>
+    <optional>
+      <argument>
+        <parameter>type</parameter>
+        <value>Bipolar</value>
+      </argument>
+      <argument>
+        <parameter>distanceThreshold</parameter>
+        <value>10</value>
+      </argument>
+    </optional>
+  </openepfunction>
+
+</workflowblock>
